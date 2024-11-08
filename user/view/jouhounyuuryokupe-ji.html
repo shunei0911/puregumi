@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>情報入力 - Pure</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 500px;
+            padding-top: 40px;
+            box-sizing: border-box;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding-bottom: 20px;
+        }
+        .header {
+            width: 100%;
+            background-color: #ccffcc;
+            color: #000;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+            font-family: cursive;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .page-title {
+            padding: 10px;
+            font-size: 22px;
+            color: #333;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
+            background-color: #fff;
+        }
+        .form-item {
+            padding: 10px;
+            font-size: 16px;
+            color: #333;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background-color: #fff;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .form-item label {
+            padding-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-item label::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            background-color: #ccc;
+        }
+        .form-item.gray-background {
+            background-color: #e0e0e0;
+        }
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            padding-left: 15px;
+            margin-top: 10px;
+            background-color: #fff;
+            border-radius: 4px;
+            padding: 10px;
+        }
+        /* 横線を引くための追加 */
+        .radio-group label {
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ccc; /* 下線を引く */
+            margin-bottom: 5px;
+        }
+        /* 最後のラベルの下線を消す */
+        .radio-group label:last-child {
+            border-bottom: none;
+        }
+        .submit-button {
+            margin: 20px;
+            padding: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .date-time-input {
+            display: none; /* デフォルトでは非表示 */
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .date-time-input input {
+            padding: 8px;
+            font-size: 16px;
+            width: 100%;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">情報入力</div>
+    <div class="container">
+        <!-- ページタイトル -->
+        <div class="page-title">情報入力</div>
+
+        <!-- お届け日指定 -->
+        <div class="form-item gray-background">
+            <label>お届け日指定</label>
+            <div class="radio-group">
+                <label><input type="radio" name="delivery" value="normal" onclick="toggleDateTimeInput()"> 通常配送</label>
+                <label><input type="radio" name="delivery" value="slow" onclick="toggleDateTimeInput()"> ゆっくり配送</label>
+                <label><input type="radio" name="delivery" value="date" onclick="toggleDateTimeInput()"> 日時指定</label>
+            </div>
+        </div>
+
+        <!-- 日時指定入力フィールド -->
+        <div class="date-time-input" id="date-time-input">
+            <label>希望日</label>
+            <input type="date" name="delivery-date" id="delivery-date">
+            <label>希望時間</label>
+            <input type="time" name="delivery-time" id="delivery-time">
+        </div>
+
+        <!-- お支払方法 -->
+        <div class="form-item gray-background">
+            <label>お支払方法</label>
+            <div class="radio-group">
+                <label><input type="radio" name="payment" value="cash"> 代金引換</label>
+                <label><input type="radio" name="payment" value="credit"> クレジットカード</label>
+                <label><input type="radio" name="payment" value="convenience"> コンビニ支払い</label>
+            </div>
+        </div>
+
+        <!-- 提出ボタン -->
+        <button type="submit" class="submit-button">確認へ進む</button>
+    </div>
+
+    <script>
+        // 日時指定が選ばれたときに日付入力フィールドを表示する関数
+        function toggleDateTimeInput() {
+            var deliveryOption = document.querySelector('input[name="delivery"]:checked').value;
+            var dateTimeInput = document.getElementById('date-time-input');
+
+            if (deliveryOption === 'date') {
+                dateTimeInput.style.display = 'block'; // 日時指定が選ばれたら表示
+            } else {
+                dateTimeInput.style.display = 'none'; // 他のオプションが選ばれたら非表示
+            }
+        }
+    </script>
+</body>
+</html>
