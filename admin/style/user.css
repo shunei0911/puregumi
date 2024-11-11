@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+}
+
+.container {
+    width: 350px;
+    border: 1px solid #ccc;
+    background-color: #e2e2ff;
+}
+
+.header {
+    text-align: left;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4b4b4b;
+    font-family: "Courier New", monospace;
+    background-color: #a9a9ff;
+}
+
+.user-list {
+    padding: 10px;
+}
+
+.user-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.name {
+    font-size: 14px;
+    color: #333;
+}
+
+.email {
+    font-size: 14px;
+    color: #0066cc;
+}
+
+.status {
+    width: 15px;
+    height: 15px;
+    background-color: #00ff00;
+    border-radius: 50%;
+    display: inline-block;
+}
