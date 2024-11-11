@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アイテムレビュー</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        header {
+            width: 100vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #a8e4a0;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-family: cursive;
+            margin-left: 20px;
+        }
+
+        .cart {
+            font-size: 24px;
+            margin-right: 20px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .container {
+            width: 320px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 60px; /* ヘッダーの高さ分を確保 */
+            padding-bottom: 20px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .item-review {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .item-image {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-right: 20px;
+        }
+
+        .item-description {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .item-description .title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .rating {
+            display: flex;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .rating span {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .rating span.selected {
+            color: gold;
+        }
+
+        .text-box {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .text-box.placeholder {
+            color: #aaa;
+        }
+
+        .review-title, .review-content {
+            margin-top: 20px;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #00aaff;
+            color: white;
+            text-align: center;
+            border-radius: 4px;
+            font-size: 16px;
+            text-decoration: none;
+            display: block;
+            margin-top: 20px;
+        }
+
+        .submit-button:hover {
+            background-color: #0088cc;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Pure</div>
+        <a href="cart.html" class="cart">🛒</a>
+    </header>
+
+    <div class="container">
+        <main>
+            <h2>アイテムレビュー</h2>
+
+            <!-- 商品レビューセクション -->
+            <div class="item-review">
+                <img src="../images/商品1.png" alt="Leeデニムジャケット" class="item-image">
+                <div class="item-description">
+                    <div class="title">Leeデニムジャケット（Gジャン）</div>
+                </div>
+            </div>
+
+            <!-- 星評価セクション -->
+            <div class="rating">
+                <span class="star" data-value="1">☆</span>
+                <span class="star" data-value="2">☆</span>
+                <span class="star" data-value="3">☆</span>
+                <span class="star" data-value="4">☆</span>
+                <span class="star" data-value="5">☆</span>
+            </div>
+            <div>どの程度の評価にしますか？</div>
+
+            <!-- レビュータイトル入力 -->
+            <div class="review-title">
+                <label for="review-title">レビューにタイトルを付ける</label>
+                <textarea id="review-title" class="text-box placeholder" placeholder="最も伝えたいポイントは何ですか？"></textarea>
+            </div>
+
+            <!-- レビュー内容入力 -->
+            <div class="review-content">
+                <label for="review-content">レビューを記入する</label>
+                <textarea id="review-content" class="text-box placeholder" placeholder="気に入ったこと・気に入らなかったことは何ですか？"></textarea>
+            </div>
+
+            <!-- 提出ボタン -->
+            <a href="submit.html" class="submit-button">レビューを投稿する</a>
+        </main>
+    </div>
+
+    <script>
+        // 星評価のクリックイベントを設定
+        const stars = document.querySelectorAll('.star');
+        stars.forEach(star => {
+            star.addEventListener('click', function() {
+                const value = this.getAttribute('data-value');
+                // 星の色を更新
+                stars.forEach(star => {
+                    if (star.getAttribute('data-value') <= value) {
+                        star.classList.add('selected');
+                    } else {
+                        star.classList.remove('selected');
+                    }
+                });
+            });
+        });
+
+        // テキストボックスの入力時にplaceholderを消す
+        document.querySelectorAll('.text-box').forEach(box => {
+            box.addEventListener('focus', function() {
+                if (this.classList.contains('placeholder')) {
+                    this.classList.remove('placeholder');
+                    this.value = '';
+                }
+            });
+
+            box.addEventListener('blur', function() {
+                if (!this.value) {
+                    this.classList.add('placeholder');
+                    this.placeholder = this.id === 'review-title' ? '最も伝えたいポイントは何ですか？' : '気に入ったこと・気に入らなかったことは何ですか？';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
