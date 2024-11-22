@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>お気に入り画面</title>
+    <title>注文確認画面</title>
     <style>
         * {
             box-sizing: border-box;
@@ -39,19 +39,12 @@
             margin-left: 20px;
         }
 
-        .cart {
-            font-size: 24px;
-            margin-right: 20px;
-            text-decoration: none;
-            color: black;
-        }
-
         .container {
             width: 320px;
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-top: 60px; /* ヘッダーの高さ分を確保 */
+            margin-top: 60px;
             padding-bottom: 20px;
         }
 
@@ -66,6 +59,7 @@
 
         .item {
             display: flex;
+            align-items: center;
             margin-bottom: 20px;
         }
 
@@ -81,6 +75,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            flex-grow: 1;
         }
 
         .item-description .title {
@@ -93,77 +88,84 @@
             color: #00aaff;
         }
 
-        .cart-button-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* 星ボタンとカートボタンの間隔 */
-}
+        .item-quantity {
+            font-size: 14px;
+            color: #333;
+            margin-top: 5px;
+        }
 
-.star-button {
-    font-size: 24px; /* 星ボタンのサイズ */
-    color: gold;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
+        .total-amount {
+            text-align: right;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
 
-.star-button:hover {
-    transform: scale(1.2); /* ホバー時に拡大 */
-}
+        .checkout-button {
+            display: inline-flex;
+            text-decoration: none;
+            width: 100%;
+            padding: 12px;
+            background-color: #00aaff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+        }
 
-.add-to-cart-button {
-    display: inline-flex;
-    text-decoration: none;
-    width: 100%;
-    padding: 12px;
-    background-color: #00aaff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.add-to-cart-button:hover {
-    background-color: #0088cc;
-}
-
-
-
-
+        .checkout-button:hover {
+            background-color: #0088cc;
+        }
     </style>
 </head>
 <body>
 
     <header>
         <div class="logo">Pure</div>
-        <a href="cart.html" class="cart">🛒</a>
     </header>
 
     <div class="container">
         <main>
-            <h2>お気に入りアイテム</h2>
+            <h2>注文確認</h2>
 
             <div class="item">
                 <img src="../images/商品1.png" alt="Leeデニムジャケット" class="item-image">
                 <div class="item-description">
                     <div class="title">Leeデニムジャケット（Gジャン）</div>
-                    <div class="price">¥7,499（税込）</div>
+                    <div class="price" data-price="7499">¥7,499（税込）</div>
+                    <div class="item-quantity">数量: 1</div>
                 </div>
             </div>
-            
 
-            <!-- カートに入れるボタン -->
-<!-- カートに入れるボタン -->
-<div class="cart-button-wrapper">
-    <span class="star-button">⭐</span> <!-- 星ボタン -->
-    <a href="cart.html" class="add-to-cart-button">カートに入れる</a>
-</div>
+            <!-- 合計金額 -->
+            <div class="total-amount" id="total-amount">合計金額: ¥7,499</div>
 
+            <!-- レジへ進むボタン -->
+            <button class="checkout-button">レジへ進む</button>
         </main>
     </div>
+
+    <script>
+        // 合計金額を初期表示
+        const prices = document.querySelectorAll('.price');
+        const quantities = document.querySelectorAll('.item-quantity');
+        const totalAmountDisplay = document.getElementById('total-amount');
+
+        let total = 0;
+        prices.forEach((priceElement, index) => {
+            const price = parseInt(priceElement.getAttribute('data-price'), 10);
+            const quantity = parseInt(quantities[index].textContent.replace('数量: ', ''), 10);
+            total += price * quantity;
+        });
+
+        totalAmountDisplay.textContent = `合計金額: ¥${total.toLocaleString()}`;
+    </script>
 
 </body>
 </html>
