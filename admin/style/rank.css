@@ -26,7 +26,7 @@ body {
     margin: 0;
     font-family: 'Georgia', serif;
     font-size: 2rem;
-    color: #4b0082;
+    color: #333;
   }
   
   /* メインコンテンツ */
@@ -123,14 +123,13 @@ body {
     font-size: 0.9rem;
     color: #888;
   }
-
   .back-button {
     width: 60px;
-    height: 60px; 
+    height: 60px;
     font-size: 16px;
-    background-color: #ccc; 
+    background-color: #ccc;
     border: none;
-    border-radius: 50%; 
+    border-radius: 50%;
     cursor: pointer;
     display: flex;
     align-items: center;
