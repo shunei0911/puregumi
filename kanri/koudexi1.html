@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pure - コーディネート</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    }
+
+    .header {
+    background-color: #d0c1f7;
+    color: #3e2e82;
+    padding: 15px;
+    font-size: 24px;
+    font-family: cursive;
+    }
+
+    /* Header */
+    .header {
+        background-color: #b8a2e0;
+        padding: 10px;
+        color: #000;
+        font-size: 24px;
+        text-align: center;
+        font-family: 'Brush Script MT', cursive;
+    }
+
+    /* Title */
+    .title {
+        margin: 15px 0;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    /* Category Buttons */
+    .category-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+        margin-bottom: 15px;
+    }
+
+    .category-buttons button {
+        padding: 5px 10px;
+        border: none;
+        color: #fff;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .category-buttons .button1 { background-color: #c4a042; }
+    .category-buttons .button2 { background-color: #ff4d4d; }
+    .category-buttons .button3 { background-color: #40c4ff; }
+    .category-buttons .button4 { background-color: #00bfa5; }
+    .category-buttons .button5 { background-color: #e57373; }
+    .category-buttons .button6 { background-color: #d0d0d0; }
+
+    /* Image Placeholders */
+    .image-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .image-placeholder {
+        height: 170px;
+        background-color: #eee;
+        color: #333;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image-placeholder img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .image-placeholder {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 12px;
+        color: #333;
+        cursor: pointer;
+        width: 100px;
+        border: 1px solid #ccc;
+        background-color: #eee;
+        position: relative;
+    }
+
+    /* Footer Button */
+    .footer {
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    .footer button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        background-color: #ddd;
+        cursor: pointer;
+    }
+
+    /* Back Arrow */
+    .back-button {
+        width: 60px;
+        height: 40px;
+        font-size: 16px;
+        background-color: #ccc;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">Pure</div>
+    <div class="title">コーディネート</div>
+
+    <div class="category-buttons">
+        <button class="button1">古着</button>
+        <button class="button2">ストリート</button>
+        <button class="button3">韓国系</button>
+        <button class="button4">清楚</button>
+        <button class="button5">カジュアル</button>
+        <button class="button6">その他</button>
+    </div>
+
+    <div class="image-grid">
+        <div class="image-placeholder">
+            <span class="close-btn">×</span>
+            <span>NO IMAGE</span>
+        </div>
+        <div class="image-placeholder">
+            <span class="close-btn">×</span>
+            <span>NO IMAGE</span>
+        </div>
+        <div class="image-placeholder">
+            <span class="close-btn">×</span>
+            <span>NO IMAGE</span>
+        </div>
+        <div class="image-placeholder">
+            <span class="close-btn">×</span>
+            <span>NO IMAGE</span>
+        </div>
+        <div class="image-placeholder">
+            <span class="close-btn">×</span>
+            <span>NO IMAGE</span>
+        </div>
+        <div class="image-placeholder">
+            <span class="close-btn">×</span>
+            <span>NO IMAGE</span>
+        </div>
+    </div>
+
+    <div class="footer">
+        <form type="submit" action="koudexi2.html" value="post">
+            <button class="add-button">追加</button>
+        </form>
+    </div>
+    <form type="submit" action="#.html" value="post">
+        <div class="back-button">←</div>
+    </form>
+
+</div>
+
+</body>
+</html>

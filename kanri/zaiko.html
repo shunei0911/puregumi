@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在庫管理</title>
+</head>
+<style>
+    /* 全体のスタイル */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* ヘッダー */
+.header {
+    background-color: #c3b9f7;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    color: black;
+}
+
+/* 在庫概要 */
+.inventory-summary {
+    padding: 20px;
+    text-align: center;
+}
+
+.inventory-summary h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+.summary-box {
+    background-color: #e6f3ff;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* 在庫リスト */
+.inventory-list {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.inventory-item {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 商品画像 */
+.product-image {
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+/* 商品詳細 */
+.product-details {
+    flex: 1;
+    font-size: 14px;
+}
+
+.product-name {
+    font-weight: bold;
+    margin: 0 0 5px;
+}
+
+.product-price {
+    color: #666;
+    margin: 0;
+}
+
+/* 在庫数 */
+.stock-count {
+    font-size: 16px;
+    font-weight: bold;
+    width: 50px;
+    text-align: center;
+}
+
+/* 戻るボタン */
+.back-button {
+        width: 60px;
+        height: 40px;
+        font-size: 16px;
+        background-color: #ccc;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+</style>
+<body>
+    <div class="header">
+        <h1>Pure</h1>
+    </div>
+
+    <!-- 在庫情報 -->
+    <div class="inventory-summary">
+        <h2>在庫一覧</h2>
+        <div class="summary-box">
+            <p>在庫数: <span id="total-stock">2000</span></p>
+            <p>仕入資産: ¥<span id="purchase-assets">8,200,000</span></p>
+            <p>販売資産: ¥<span id="sales-assets">12,450,300</span></p>
+        </div>
+    </div>
+
+    <!-- 在庫リスト -->
+    <div class="inventory-list">
+        <div class="inventory-item">
+            <div class="product-image"></div>
+            <div class="product-details">
+                <p class="product-name">古着 メンズ Lee デニムジャケット Gジャン</p>
+                <p class="product-price">サイズ: FREE SIZE ¥7,499（税込）</p>
+            </div>
+            <div class="stock-count">120</div>
+        </div>
+        <div class="inventory-item">
+            <div class="product-image"></div>
+            <div class="product-details">
+                <p class="product-name">used Tシャツ/カットソー 古着</p>
+                <p class="product-price">サイズ: FREE SIZE ¥8,499（税込）</p>
+            </div>
+            <div class="stock-count">58</div>
+        </div>
+        <!-- 商品アイテムを複製してリストを作成 -->
+    </div>
+
+    <!-- 戻るボタン -->
+    <form type="submit" action=".html" value="post">
+        <button class="back-button">←</button>
+    </form>
+</body>
+</html>

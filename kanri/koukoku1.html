@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+<style>
+    /* 全体のスタイル */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #d0c1f7;
+  color: #3e2e82;
+  padding: 10px;
+  font-size: 24px;
+  font-family: cursive;
+}
+
+/* メイン画像 */
+.main-image {
+  margin-top: 10px;
+  padding: 10px;
+}
+@media (min-width: 1200px) {
+  .main-image {
+    width: 100%; /* デスクトップ画面では幅を50%に変更 */
+    
+  }
+}
+
+.image-placeholder {
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px 0;
+  background-color: #ccc;
+  font-size: 24px;
+  color: #333;
+  border: 1px solid #999;
+  position: relative;
+}
+
+.advertisement {
+  margin: 20px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+/* カードのスタイル */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 10px;
+}
+
+.card {
+  width: 100px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  position: relative;
+}
+
+.card-image {
+  height: 170px;
+  background-color: #aaa;
+  color: #333;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-text {
+  font-size: 10px;
+  padding: 5px;
+}
+
+/* 追加ボタン */
+.add-button {
+  margin: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+}
+
+</style>    
+</head>
+<body>
+    <div class="header">Pure</div>
+
+    <div class="main-image">
+        <div class="image-placeholder">NO IMAGE</div>
+    </div>
+
+    <div class="advertisement">広告</div>
+
+    <div class="card-container">
+        <div class="card">
+            <div class="card-image">NO IMAGE</div>
+            <div class="card-text">人気ブランドが続々ラインアップ！</div>
+        </div>
+        <div class="card">
+            <div class="card-image">NO IMAGE</div>
+        </div>
+        <div class="card">
+            <div class="card-image">NO IMAGE</div>
+        </div>
+        <div class="card">
+            <div class="card-image">NO IMAGE</div>
+        </div>
+        <div class="card">
+            <div class="card-image">NO IMAGE</div>
+        </div>
+        <div class="card">
+            <div class="card-image">NO IMAGE</div>
+        </div>
+    </div>
+    <form type="submit" action="koukoku2.html" value="post">
+        <button class="add-button">追加</button>
+    </form>
+
+</body>
+</html>
