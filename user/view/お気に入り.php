@@ -93,41 +93,53 @@
             color: #00aaff;
         }
 
-        .item-description .size {
-            font-size: 12px;
-            margin-top: 3px;
-        }
+        .cart-button-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* 星ボタンとカートボタンの間隔 */
+}
 
-        .add-to-cart-button {
-            width: 100%;
-            padding: 12px;
-            background-color: #00aaff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-size: 16px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
+.star-button {
+    font-size: 24px; /* 星ボタンのサイズ */
+    color: gold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
 
-        .add-to-cart-button:hover {
-            background-color: #0088cc;
-        }
+.star-button:hover {
+    transform: scale(1.2); /* ホバー時に拡大 */
+}
 
-        .star {
-            font-size: 20px;
-            color: gold;
-        }
+.add-to-cart-button {
+    display: inline-flex;
+    text-decoration: none;
+    width: 100%;
+    padding: 12px;
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.add-to-cart-button:hover {
+    background-color: #0088cc;
+}
+
+
+
+
     </style>
 </head>
 <body>
 
     <header>
         <div class="logo">Pure</div>
-        <a href="cart.html" class="cart">🛒</a>
+        <a href="カート.php" class="cart">🛒</a>
     </header>
 
     <div class="container">
@@ -141,12 +153,15 @@
                     <div class="price">¥7,499（税込）</div>
                 </div>
             </div>
+            
 
             <!-- カートに入れるボタン -->
-            <button class="add-to-cart-button">
-                カートに入れる
-                <span class="star">★</span>
-            </button>
+<!-- カートに入れるボタン -->
+<div class="cart-button-wrapper">
+    <span class="star-button">⭐</span> <!-- 星ボタン -->
+    <a href="カート.php" class="add-to-cart-button">カートに入れる</a>
+</div>
+
         </main>
     </div>
 

@@ -132,7 +132,7 @@
 
     <header>
         <div class="logo">Pure</div>
-        <a href="cart.html" class="cart">🛒</a>
+        <a href="カート.php" class="cart">🛒</a>
     </header>
 
     <div class="container">
@@ -152,7 +152,7 @@
             </div>
 
             <!-- レビュー用ボタン -->
-            <a href="review.html" class="review-button">レビューする</a>
+            <a href="レビュー.php" class="review-button">レビューする</a>
         </main>
     </div>
 
