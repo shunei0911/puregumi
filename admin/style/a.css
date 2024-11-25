@@ -1,56 +1,62 @@
-body {
+/* リセット */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f8f8f8;
-}
-
-.container {
-    width: 300px; /* 幅を300pxに設定 */
-    height: 600px; /* 高さを500pxに設定 */
-    border: 1px solid #ccc;
-    background-color: #e2e2ff;
-}
-
-.header {
-    text-align: left;
-    padding: 10px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #4b4b4b;
-    font-family: "Courier New", monospace;
-    background-color: #a9a9ff;
-}
-
-.menu {
+    background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    margin-top: 70px; /* ボタンをさらに下に下げる */
+    min-height: 100vh;
 }
 
-.button-link {
-    display: block;
-    width: 60%;
-    text-decoration: none; /* リンクの下線を消す */
-}
-
-.menu button {
+/* ヘッダー部分 */
+.header {
     width: 100%;
-    margin: 5px 0;
-    padding: 10px;
+    background-color: #bfb3f2; /* 紫色の背景色 */
+    padding: 20px; /* 左右に余白を設定 */
+    top: 0;
+    z-index: 1000; /* 他の要素の上に表示 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+
+}
+
+.header h1 {
+    margin: 0;
+}
+
+/* ナビゲーションボタン部分 */
+.nav {
+    margin-top: 80px; /* ヘッダーとの間隔を確保 */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* ボタンを中央揃え */
+    gap: 15px; /* ボタン間の余白 */
+}
+
+.button {
+    width: 200px;
+    padding: 15px;
     font-size: 16px;
-    color: #4b4b4b;
+    color: #000;
     background-color: #d3d3d3;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* ホバー時のアニメーション */
+    text-align: center;
 }
 
-.menu button:hover {
-    background-color: #c0c0c0;
+.button:hover {
+    background-color: #d3d3d3; /* ホバー時の色変更 */
 }
+
+.button-link {
+    text-decoration: none; /* リンクの下線を削除 */
+}
+
