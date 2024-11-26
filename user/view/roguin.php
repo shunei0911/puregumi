@@ -46,8 +46,8 @@
 
 <div class="container">
     <div class="title">Pure</div>
-    <a href="roguin2.html" class="button login-btn">ログイン</a>
-    <a href="shinki.html" class="button signup-btn">新規アカウント作成</a>
+    <a href="roguin2.php" class="button login-btn">ログイン</a>
+    <a href="shinki.php" class="button signup-btn">新規アカウント作成</a>
 </div>
 
 </body>
