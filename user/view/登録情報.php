@@ -105,6 +105,6 @@
         <div class="info-item"><span>郵便番号</span><span>123-4567</span></div>
         <div class="info-item"><span>住所</span><span>福岡県福岡市博多区博多駅南2丁目12-32</span></div>
     </div>
-    <a href="#" class="back-button">&larr;</a>
+    <a href="マイページ.php" class="back-button">&larr;</a>
 </body>
 </html>

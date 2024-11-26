@@ -122,6 +122,22 @@
         .checkout-button:hover {
             background-color: #0088cc;
         }
+
+        .back-button {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            text-decoration: none;
+            color: #333;
+        }
     </style>
 </head>
 <body>
@@ -144,8 +160,10 @@
             </div>
 
             <!-- 確認へ進むボタン -->
-            <button class="checkout-button">確認へ進む</button>
-        </main>
+         
+            <a href="レビュー.php" class="checkout-button">確認へ進む </a>        
+            </main>
+            <a href="home.php" class="back-button">&larr;</a>
     </div>
 
 </body>

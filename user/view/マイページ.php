@@ -114,9 +114,9 @@
         <!-- 会員登録情報セクション -->
         <div class="section-title">会員登録情報</div>
         <div class="menu">
-            <div class="menu-item"><a href="登録情報.php">登録情報</a><span>&gt;</span></div>
-            <div class="menu-item"><a href="#">注文履歴</a><span>&gt;</span></div>
-            <div class="menu-item"><a href="レビュー選択.php">アイテムレビュー</a><span>&gt;</span></div>
+            <div class="menu-item"><a href="登録情報.php">登録情報　　　　　　　　　　　　　　　　　　　　　　　　></a></div>
+            <div class="menu-item"><a href="#">注文履歴　　　　　　　　　　　　　　　　　　　　　　　　></a></div>
+            <div class="menu-item"><a href="レビュー選択.php">アイテムレビュー　　　　　　　　　　　　　　　　　　　　></a></div>
         </div>
 
         <!-- その他セクション -->

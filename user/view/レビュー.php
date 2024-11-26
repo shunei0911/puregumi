@@ -121,6 +121,22 @@
             font-size: 20px;
             color: gold;
         }
+
+        .back-button {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            text-decoration: none;
+            color: #333;
+        }
     </style>
 </head>
 <body>
@@ -148,6 +164,7 @@
                 <span class="star">★</span>
             </button>
         </main>
+        <a href="レビュー選択.php" class="back-button">&larr;</a>
     </div>
 
 </body>

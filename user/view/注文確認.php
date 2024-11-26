@@ -166,6 +166,6 @@
 
         totalAmountDisplay.textContent = `合計金額: ¥${total.toLocaleString()}`;
     </script>
-
+ <a href="レビュー選択.php" class="back-button">&larr;</a>
 </body>
 </html>
