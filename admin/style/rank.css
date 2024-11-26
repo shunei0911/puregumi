@@ -14,7 +14,6 @@ body {
     background-color: #ffffff;
   }
   
-  /* ヘッダー */
   header {
     background-color: #d0c4f5;
     padding: 20px;
@@ -29,7 +28,6 @@ body {
     color: #333;
   }
   
-  /* メインコンテンツ */
   main {
     flex-grow: 1;
     overflow-y: auto;
