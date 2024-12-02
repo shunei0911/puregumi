@@ -160,9 +160,9 @@
                     </div>
                     <div class="form-group">
                         <label>生年月日</label>
-                        <input type="number" name="birth_year" placeholder="年" min="1900" max="2024" style="width: 20%;" required> 年
-                        <input type="number" name="birth_month" placeholder="月" min="1" max="12" style="width: 10%;" required> 月
-                        <input type="number" name="birth_day" placeholder="日" min="1" max="31" style="width: 10%;" required> 日
+                        <input type="number" name="birth_year" placeholder="年" min="1900" max="2024" style="width: 25%;" required> 年
+                        <input type="number" name="birth_month" placeholder="月" min="1" max="12" style="width: 20%;" required> 月
+                        <input type="number" name="birth_day" placeholder="日" min="1" max="31" style="width: 20%;" required> 日
                     </div>
                     <div class="form-group">
                         <label for="email">メールアドレス</label>
