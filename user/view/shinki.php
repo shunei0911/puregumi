@@ -182,11 +182,28 @@
                     </div>
                     <div class="buttons">
                         <button type="button" class="btn btn-back" onclick="window.location.href='roguin2.html'">戻る</button>
-                        <a href="shinki2.php" class="btn btn-submit">登録</a>
+                        <button type="submit" class="btn btn-submit">登録</button>
                     </div>
                 </form>
             </div>
         </div>
+
+        <!-- 確認画面 -->
+        <div id="confirmation-container" class="container" style="display: none;">
+            <p class="header-title">入力内容確認</p>
+            <form action="signup_complete.php" method="post">
+                <div class="form-group"><label>名前</label><span id="confirm-name" class="confirm-value"></span></div>
+                <div class="form-group"><label>性別</label><span id="confirm-gender" class="confirm-value"></span></div>
+                <div class="form-group"><label>住所</label><span id="confirm-address" class="confirm-value"></span></div>
+                <div class="form-group"><label>生年月日</label><span id="confirm-birthdate" class="confirm-value"></span></div>
+                <div class="form-group"><label>メールアドレス</label><span id="confirm-email" class="confirm-value"></span></div>
+                <div class="form-group"><label>郵便番号</label><span id="confirm-postal-code" class="confirm-value"></span></div>
+                <div class="buttons">
+                    <button type="button" class="btn btn-back" onclick="goBackToForm()">戻る</button>
+                    <button type="submit" class="btn btn-submit" onclick="alert('登録が完了しました！')">確定</button>
+                </div>
+        </div>
     </form>
 </body>
+
 </html>
