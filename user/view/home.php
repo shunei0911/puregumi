@@ -40,7 +40,7 @@
             <div class="icon">🏠</div>
             <p>ホーム</p>
         </button>
-        <button onclick="navigateTo('お気に入り.php')">
+        <button onclick="navigateTo('okiniiri.php')">
             <div class="icon">⭐</div>
             <p>お気に入り</p>
         </button>
@@ -48,7 +48,7 @@
             <div class="icon">🔍</div>
             <p>検索</p>
         </button>
-        <button onclick="navigateTo('マイページ.php')">
+        <button onclick="navigateTo('mypage.php')">
             <div class="icon">👤</div>
             <p>マイページ</p>
         </button>
