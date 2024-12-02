@@ -9,7 +9,6 @@
     align-items: center;
   }
   
-  /* ヘッダー */
   .header {
     background-color: #bfb3f2;
     width: 100%;
@@ -39,7 +38,6 @@
     margin-bottom: 20px;
   }
   
-  /* プロフィール項目 */
   .profile-item {
     margin: 15px 0;
   }
