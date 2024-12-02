@@ -104,33 +104,7 @@
             box-sizing: border-box;
         }
     </style>
-    <script>
-        function showConfirmation() {
-            const name = document.getElementById("name").value;
-            const gender = document.querySelector('input[name="gender"]:checked')?.value || "";
-            const address = document.getElementById("address").value;
-            const birthYear = document.querySelector('input[name="birth_year"]').value;
-            const birthMonth = document.querySelector('input[name="birth_month"]').value;
-            const birthDay = document.querySelector('input[name="birth_day"]').value;
-            const email = document.getElementById("email").value;
-            const postalCode = document.getElementById("postal-code").value;
-
-            document.getElementById("confirm-name").textContent = name;
-            document.getElementById("confirm-gender").textContent = gender;
-            document.getElementById("confirm-address").textContent = address;
-            document.getElementById("confirm-birthdate").textContent = `${birthYear}年 ${birthMonth}月 ${birthDay}日`;
-            document.getElementById("confirm-email").textContent = email;
-            document.getElementById("confirm-postal-code").textContent = postalCode;
-
-            document.getElementById("form-container").style.display = "none";
-            document.getElementById("confirmation-container").style.display = "block";
-        }
-
-        function goBackToForm() {
-            document.getElementById("form-container").style.display = "block";
-            document.getElementById("confirmation-container").style.display = "none";
-        }
-    </script>
+    
 </head>
 
 <body>
