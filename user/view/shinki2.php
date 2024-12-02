@@ -137,50 +137,11 @@
     <div class="header">Pure</div>
 
     <!-- 入力画面 -->
-    <div id="form-container" class="container">
-        <p class="header-title">新規登録</p>
-        <form onsubmit="event.preventDefault(); showConfirmation();">
-            <div class="form-group">
-                <label for="name">名前</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label>性別</label>
-                <div class="gender-options">
-                    <label><input type="radio" name="gender" value="男性"> 男性</label>
-                    <label><input type="radio" name="gender" value="女性"> 女性</label>
-                    <label><input type="radio" name="gender" value="その他"> その他</label>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="address">住所</label>
-                <input type="text" id="address" name="address" required>
-            </div>
-            <div class="form-group">
-                <label>生年月日</label>
-                <input type="number" name="birth_year" placeholder="年" min="1900" max="2024" style="width: 25%;" required> 年
-                <input type="number" name="birth_month" placeholder="月" min="1" max="12" style="width: 20%;" required> 月
-                <input type="number" name="birth_day" placeholder="日" min="1" max="31" style="width: 20%;" required> 日
-            </div>
-            <div class="form-group">
-                <label for="email">メールアドレス</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="postal-code">郵便番号</label>
-                <input type="text" id="postal-code" name="postal_code" required>
-            </div>
-            <div class="buttons">
-                <button type="button" class="btn btn-back" onclick="window.location.href='roguin2.html'">戻る</button>
-                <button type="submit" class="btn btn-submit">次へ</button>
-            </div>
-        </form>
-    </div>
 
     <!-- 確認画面 -->
     <div id="confirmation-container" class="container" style="display: none;">
         <p class="header-title">入力内容確認</p>
-        <form action="signup_complete.php" method="post">
+        <form action="home.php" method="post">
             <div class="form-group"><label>名前</label><span id="confirm-name" class="confirm-value"></span></div>
             <div class="form-group"><label>性別</label><span id="confirm-gender" class="confirm-value"></span></div>
             <div class="form-group"><label>住所</label><span id="confirm-address" class="confirm-value"></span></div>
@@ -192,6 +153,7 @@
                 <button type="submit" class="btn btn-submit">登録</button>
             </div>
         </form>
+    </div>
     </div>
 </body>
 
