@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品リスト</title>
+</head>
+<style>
+    /* 全体のスタイル */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* ヘッダー */
+.header {
+  background-color: #d0c1f7;
+  color: #3e2e82;
+  padding: 10px;
+  font-size: 24px;
+  font-family: cursive;
+}
+
+
+/* 商品セクション */
+.product-section h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* 商品グリッド */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* 商品カード */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 画像プレースホルダー */
+.image-placeholder {
+    background-color: #ccc;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 14px;
+    position: relative;
+}
+
+.image-placeholder::after {
+    content: "✖";
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 14px;
+    color: black;
+}
+
+/* 商品情報 */
+.product-info {
+    height: 50px;
+}
+
+/* 追加ボタン */
+.add-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.back-button {
+        width: 60px;
+        height: 60px;
+        font-size: 16px;
+        background-color: #ccc;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+</style>
+<body>
+    <div class="header">Pure</div>
+    
+    <div class="product-section">
+        <h2>新商品</h2>
+        <div class="product-grid">
+            <!-- 商品カード -->
+            <div class="product-card">
+                <div class="image-placeholder">NO IMAGE</div>
+                <div class="product-info"></div>
+            </div>
+            <!-- 商品カードを複製 -->
+            <div class="product-card">
+                <div class="image-placeholder">NO IMAGE</div>
+                <div class="product-info"></div>
+            </div>
+            <div class="product-card">
+                <div class="image-placeholder">NO IMAGE</div>
+                <div class="product-info"></div>
+            </div>
+            <div class="product-card">
+                <div class="image-placeholder">NO IMAGE</div>
+                <div class="product-info"></div>
+            </div>
+            <div class="product-card">
+                <div class="image-placeholder">NO IMAGE</div>
+                <div class="product-info"></div>
+            </div>
+            <div class="product-card">
+                <div class="image-placeholder">NO IMAGE</div>
+                <div class="product-info"></div>
+            </div>
+            <div class="product-card">
+                <div class="image-placeholder">NO IMAGE</div>
+                <div class="product-info"></div>
+            </div>
+            <div class="product-card">
+                <div class="image-placeholder">NO IMAGE</div>
+                <div class="product-info"></div>
+            </div>
+            <div class="product-card">
+                <div class="image-placeholder">NO IMAGE</div>
+                <div class="product-info"></div>
+            </div>
+        </div>
+        <form type="submit" action="syohin2.html" value="post"> 
+            <button class="add-button">追加</button>
+        </form>
+        
+        <button class="back-button">←</button>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>入荷・出荷通知</title>
+</head>
+<style>
+    /* 全体のスタイル */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* ヘッダー */
+.header {
+    background-color: #c3b9f7;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    color: black;
+}
+
+/* 通知セクション */
+.notification-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.notification-section h2 {
+    margin: 0;
+    font-size: 18px;
+    color: black;
+}
+
+/* 通知リスト */
+.notification-list {
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+/* 通知アイテム */
+.notification-item {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* アイコン */
+.icon {
+    font-size: 20px;
+    font-weight: bold;
+    width: 30px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 30px;
+    margin-right: 10px;
+}
+
+.icon.up {
+    color: #007bff;
+    background-color: #e7f3ff;
+}
+
+.icon.down {
+    color: #28a745;
+    background-color: #e6f8e9;
+}
+
+/* 通知の詳細 */
+.details {
+    flex: 1;
+}
+
+.details .type {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.details .description {
+    font-size: 14px;
+    color: #666;
+}
+
+/* 数量 */
+.quantity {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 50px;
+}
+
+/* 戻るボタン */
+.back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+</style>
+<body>
+    <div class="header">
+        <h1>Pure</h1>
+    </div>
+    <div class="notification-section">
+        <h2>作業一覧<br>入荷・出荷</h2>
+        <div class="notification-list">
+            <!-- 通知アイテム -->
+            <div class="notification-item">
+                <div class="icon up">↑</div>
+                <div class="details">
+                    <p class="type">出荷 2023-9-19</p>
+                    <p class="description">古着 メンズ Lee デニムジャケット Gジャン<br>サイズ: FREE SIZE ¥7,499（税込）</p>
+                </div>
+                <div class="quantity">-30</div>
+            </div>
+            <div class="notification-item">
+                <div class="icon up">↑</div>
+                <div class="details">
+                    <p class="type">出荷 2023-9-19</p>
+                    <p class="description">used Tシャツ/カットソー 古着<br>サイズ: FREE SIZE ¥8,499（税込）</p>
+                </div>
+                <div class="quantity">-10</div>
+            </div>
+            <div class="notification-item">
+                <div class="icon down">↓</div>
+                <div class="details">
+                    <p class="type">入荷 2023-9-18</p>
+                    <p class="description">GRANCY カーディガン/ボレロ<br>サイズ: FREE SIZE ¥16,500（税込）</p>
+                </div>
+                <div class="quantity">+30</div>
+            </div>
+        </div>
+        <form type="submit" action=".html" value="post">
+            <button class="back-button">←</button>
+        </form>
+    </div>
+</body>
+</html>
