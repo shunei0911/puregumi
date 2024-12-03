@@ -159,7 +159,7 @@
 <!-- カートに入れるボタン -->
 <div class="cart-button-wrapper">
     <span class="star-button">⭐</span> <!-- 星ボタン -->
-    <a href="カート.php" class="add-to-cart-button">カートに入れる</a>
+    <a href="cart.php" class="add-to-cart-button">カートに入れる</a>
 </div>
 
         </main>

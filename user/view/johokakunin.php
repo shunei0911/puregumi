@@ -190,7 +190,7 @@
 
             <button class="submit-button">確認へ進む</button>
         </main>
-        <a href="レビュー選択.php" class="back-button">&larr;</a>
+        <a href="select_review.php" class="back-button">&larr;</a>
     </div>
 
 </body>

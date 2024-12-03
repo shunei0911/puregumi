@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>カート画面</title>
+    <title>注文確認画面</title>
     <style>
         * {
             box-sizing: border-box;
@@ -37,13 +37,6 @@
             font-size: 24px;
             font-family: cursive;
             margin-left: 20px;
-        }
-
-        .cart {
-            font-size: 24px;
-            margin-right: 20px;
-            text-decoration: none;
-            color: black;
         }
 
         .container {
@@ -95,12 +88,20 @@
             color: #00aaff;
         }
 
-        .quantity-selector {
-            width: 60px;
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            text-align: center;
+        .item-quantity {
+            font-size: 14px;
+            color: #333;
+            margin-top: 5px;
+        }
+
+        .total-amount {
+            text-align: right;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
         }
 
         .checkout-button {
@@ -116,27 +117,10 @@
             cursor: pointer;
             align-items: center;
             justify-content: center;
-            margin-top: 20px;
         }
 
         .checkout-button:hover {
             background-color: #0088cc;
-        }
-
-        .back-button {
-            position: absolute;
-            bottom: 10px;
-            left: 10px;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: #ddd;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            text-decoration: none;
-            color: #333;
         }
     </style>
 </head>
@@ -148,23 +132,40 @@
 
     <div class="container">
         <main>
-            <h2>カートアイテム</h2>
+            <h2>注文確認</h2>
 
             <div class="item">
                 <img src="../images/商品1.png" alt="Leeデニムジャケット" class="item-image">
                 <div class="item-description">
                     <div class="title">Leeデニムジャケット（Gジャン）</div>
-                    <div class="price">¥7,499（税込）</div>
+                    <div class="price" data-price="7499">¥7,499（税込）</div>
+                    <div class="item-quantity">数量: 1</div>
                 </div>
-                <input type="number" class="quantity-selector" value="1" min="1">
             </div>
 
-            <!-- 確認へ進むボタン -->
-         
-            <a href="レビュー.php" class="checkout-button">確認へ進む </a>        
-            </main>
-            <a href="home.php" class="back-button">&larr;</a>
+            <!-- 合計金額 -->
+            <div class="total-amount" id="total-amount">合計金額: ¥7,499</div>
+
+            <!-- レジへ進むボタン -->
+            <button class="checkout-button">レジへ進む</button>
+        </main>
     </div>
 
+    <script>
+        // 合計金額を初期表示
+        const prices = document.querySelectorAll('.price');
+        const quantities = document.querySelectorAll('.item-quantity');
+        const totalAmountDisplay = document.getElementById('total-amount');
+
+        let total = 0;
+        prices.forEach((priceElement, index) => {
+            const price = parseInt(priceElement.getAttribute('data-price'), 10);
+            const quantity = parseInt(quantities[index].textContent.replace('数量: ', ''), 10);
+            total += price * quantity;
+        });
+
+        totalAmountDisplay.textContent = `合計金額: ¥${total.toLocaleString()}`;
+    </script>
+ <a href="select_review.php" class="back-button">&larr;</a>
 </body>
 </html>
