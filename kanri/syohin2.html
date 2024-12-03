@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>広告レイアウト</title>
+<style>
+    /* 基本スタイル */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+.header {
+    background-color: #d0c1f7;
+    color: #3e2e82;
+    padding: 15px;
+    font-size: 24px;
+    font-family: cursive;
+}
+
+/* 広告セクション */
+.advertisement {
+    margin: 20px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+/* メイン画像のプレースホルダー */
+.main-image {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.image-placeholder {
+    width: 90%;
+    max-width: 400px;
+    height: 200px;
+    background-color: #aaa;
+    border: 1px solid #999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+
+.image-icon {
+    font-size: 24px;
+}
+
+.image-text {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* テキスト入力フィールド */
+.input-section {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.text-input {
+    width: 90%;
+    max-width: 400px;
+    height: 200px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    background-color: #ddd;
+    box-sizing: border-box;
+}
+
+/* ボタンセクション */
+.buttons {
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.back-button, .complete-button {
+    width: 60px;
+    height: 60px;
+    font-size: 16px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.complete-button {
+    border-radius: 5px; /* 完了ボタンのみ角を少し丸く */
+    padding: 0 10px;
+    width: auto;
+    height: 30px;
+    position: relative;
+    left:5%;
+}
+
+.back-button{
+    position: relative;
+    left:-200%;
+}
+
+</style>
+</head>
+<body>
+    <div class="header">Pure</div>
+
+    <div class="advertisement">商品名</div>
+
+    <div class="main-image">
+        <div class="image-placeholder">
+            <div class="image-icon">🌙</div>
+            <div class="image-text">NO IMAGE</div>
+        </div>
+    </div>
+
+    <div class="input-section">
+        <input type="text" class="text-input" placeholder="">
+    </div>
+
+    <div class="buttons">
+    <form type="submit" action="syohin1.html" value="post">    
+        <button class="back-button">←</button>
+        <button class="complete-button">完了</button>
+    </form>
+    </div>
+</body>
+</html>

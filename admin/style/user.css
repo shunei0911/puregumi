@@ -73,7 +73,6 @@ body {
     background-color: #ffffff;
   }
   
-  /* ステータスボタン */
   .button {
     display: inline-block;
     width: 24px; /* ボタンの幅 */
