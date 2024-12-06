@@ -82,7 +82,7 @@
     </div>
  
     <div class="img-Pure">
-        <img src="../images/Pure.png" alt="Pure Logo">
+        <img src="../images/画像5.png" alt="Pure Logo">
     </div>
  
     <div class="message">
