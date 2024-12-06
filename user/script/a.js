@@ -5,17 +5,17 @@ let currentSlide = 0;
             updateDots();
             // スライドの内容変更処理をここに実装
             if (currentSlide === 0) {
-                photo.innerHTML = '<img style="height: 400px; width: 300px" src="./../images/S__835587.jpg">';
+                photo.innerHTML = '<img style="height: 400px; width: 600px" src="./../images/Image1.jpg">';
             } else if (currentSlide === 1) {
-                photo.innerHTML = '<img style="height: 400px; width: 300px" src="./../images/S__3219473.jpg">';
+                photo.innerHTML = '<img style="height: 400px; width: 600px" src="./../images/Image2.jpg">';
             } else if (currentSlide === 2) {
-                photo.innerHTML = '<img style="height: 400px; width: 300px" src="./../images/S__3219474.jpg">';
+                photo.innerHTML = '<img style="height: 400px; width: 600px" src="./../images/Image3.jpg">';
             } else if (currentSlide === 3) {
-                photo.innerHTML = '<img style="height: 400px; width: 300px" src="./../images/S__3219475.jpg">'
+                photo.innerHTML = '<img style="height: 400px; width: 600px" src="./../images/Image4.jpg">'
             } else if (currentSlide === 4) {
-                photo.innerHTML = '<img style="height: 400px; width: 300px" src="./../images/S__3219476.jpg">';
+                photo.innerHTML = '<img style="height: 400px; width: 600px" src="./../images/Image5.jpg">';
             } else {
-                photo.innerHTML = '<img style="height: 400px; width: 300px" src="./../images/S__835587.jpg">';
+                photo.innerHTML = '<img style="height: 400px; width: 600px" src="./../images/Image1.jpg">';
             }
         }
 

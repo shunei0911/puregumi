@@ -13,13 +13,13 @@
     <!-- ヘッダー -->
     <div class="header">
         <div class="title">Pure</div>
-        <a href="カート.php" class="cart-icon" >🛒</a>
+        <a href="cart.php" class="cart-icon" >🛒</a>
     </div>
 
     <!-- コンテンツ -->
     <div class="content">
 
-        <div id="img-area"><img style="height: 400px;" src="./../images/S__835587.jpg"></div>
+        <div id="img-area"><img style="height: 400px; width: 600px" src="./../images/Image1.jpg"></div>
 
         <!-- サムネイルのドットスクロール -->
         <div class="thumbnail-scroll">

@@ -122,6 +122,22 @@
         .checkout-button:hover {
             background-color: #0088cc;
         }
+
+        .back-button {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            text-decoration: none;
+            color: #333;
+        }
     </style>
 </head>
 <body>
@@ -147,10 +163,10 @@
             <div class="total-amount" id="total-amount">合計金額: ¥7,499</div>
 
             <!-- レジへ進むボタン -->
-            <button class="checkout-button">レジへ進む</button>
+            <button class="checkout-button" onclick="location.href='johonyuryoku.php'">レジへ進む</button>
         </main>
     </div>
-
+    <a href="cart.php" class="back-button">&larr;</a>
     <script>
         // 合計金額を初期表示
         const prices = document.querySelectorAll('.price');
@@ -166,6 +182,5 @@
 
         totalAmountDisplay.textContent = `合計金額: ¥${total.toLocaleString()}`;
     </script>
- <a href="select_review.php" class="back-button">&larr;</a>
 </body>
 </html>

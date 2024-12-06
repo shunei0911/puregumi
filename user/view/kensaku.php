@@ -148,8 +148,8 @@
     <!-- 検索バー -->
     <div class="search-bar">
         <input type="text" placeholder="検索">
-        <span class="search-icon">🔍</span>
-        <span class="ranking-icon">ランキング</span>
+        <button class="search-icon" onclick="location.href='kensakukekka.php'">🔍</button>
+        <button class="ranking-icon" onclick="location.href='rankingu.php'">ランキング</button>
     </div>
 
     <!-- コーディネートボタン -->
