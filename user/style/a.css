@@ -1,0 +1,106 @@
+/* 全体のスタイル */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ヘッダー部分 */
+.header {
+    width: 100%;
+    background-color: #b6f1b1;
+    color: black;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.5em;
+    font-family: 'Brush Script MT', cursive;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.header .title {
+    flex: 1;
+    text-align: center;
+}
+
+.header .cart-icon {
+    font-size: 1.5em;
+    margin-right: 15px;
+}
+
+/* コンテンツ部分 */
+.content {
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    margin-top: 20px;
+    flex-grow: 1;
+}
+
+/* プロモーションボタン */
+.promo-button {
+    background-color: #f9d835;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 15px 0;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* サムネイルのドットスクロール */
+.thumbnail-scroll {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.thumbnail-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.thumbnail-dot.active {
+    background-color: #000;
+}
+
+/* ナビゲーションメニュー */
+.navigation-menu {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navigation-menu button {
+    background: none;
+    border: none;
+    font-size: 0.8em;
+    color: black;
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navigation-menu button .icon {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
