@@ -13,7 +13,7 @@
     <!-- ヘッダー -->
     <div class="header">
         <div class="title">Pure</div>
-        <a href="カート.php" class="cart-icon" >🛒</a>
+        <a href="cart.php" class="cart-icon" >🛒</a>
     </div>
 
     <!-- コンテンツ -->

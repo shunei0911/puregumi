@@ -163,7 +163,7 @@
             <div class="total-amount" id="total-amount">合計金額: ¥7,499</div>
 
             <!-- レジへ進むボタン -->
-            <button class="checkout-button">レジへ進む</button>
+            <button class="checkout-button" onclick="location.href='johonyuryoku.php'">レジへ進む</button>
         </main>
     </div>
     <a href="cart.php" class="back-button">&larr;</a>

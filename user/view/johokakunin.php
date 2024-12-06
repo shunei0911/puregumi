@@ -188,7 +188,7 @@
                 </div>
             </section>
 
-            <button class="submit-button">確認へ進む</button>
+            <button class="submit-button" onclick="location.href='kounyukanryou.php'">確認へ進む</button>
         </main>
         <a href="select_review.php" class="back-button">&larr;</a>
     </div>

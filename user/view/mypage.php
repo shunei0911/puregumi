@@ -114,9 +114,9 @@
         <!-- 会員登録情報セクション -->
         <div class="section-title">会員登録情報</div>
         <div class="menu">
-            <div class="menu-item"><a href="登録情報.php">登録情報　　　　　　　　　　　　　　　　　　　　　　　　></a></div>
+            <div class="menu-item"><a href="torokujoho.php">登録情報　　　　　　　　　　　　　　　　　　　　　　　　></a></div>
             <div class="menu-item"><a href="#">注文履歴　　　　　　　　　　　　　　　　　　　　　　　　></a></div>
-            <div class="menu-item"><a href="レビュー選択.php">アイテムレビュー　　　　　　　　　　　　　　　　　　　　></a></div>
+            <div class="menu-item"><a href="select_review.php">アイテムレビュー　　　　　　　　　　　　　　　　　　　　></a></div>
         </div>
 
         <!-- その他セクション -->
@@ -125,7 +125,7 @@
             <div class="menu-item"><span>バージョン情報</span><span>1.1</span></div>
         </div>
 
-        <button class="logout-button">ログアウト</button>
+        <button class="logout-button" onclick="location.href='roguin.php'">ログアウト</button>
     </div>
     <a href="home.php" class="back-button">&larr;</a>
 </body>
