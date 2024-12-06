@@ -167,9 +167,9 @@
             </div>
 
             <!-- レビュー用ボタン -->
-            <a href="レビュー.php" class="review-button">レビューする</a>
+            <a href="review.php" class="review-button">レビューする</a>
         </main>
-        <a href="マイページ.php" class="back-button">&larr;</a>
+        <a href="home.php" class="back-button">&larr;</a>
     </div>
 
 </body>
