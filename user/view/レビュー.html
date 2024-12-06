@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>お気に入り画面</title>
+    <title>アイテムレビュー</title>
     <style>
         * {
             box-sizing: border-box;
@@ -17,7 +17,6 @@
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
-            background-color: #f0f0f0;
             margin: 0;
         }
 
@@ -39,13 +38,6 @@
             margin-left: 20px;
         }
 
-        .cart {
-            font-size: 24px;
-            margin-right: 20px;
-            text-decoration: none;
-            color: black;
-        }
-
         .container {
             width: 320px;
             background-color: white;
@@ -64,23 +56,27 @@
             font-size: 16px;
         }
 
-        .item {
+        .item-review {
             display: flex;
+            padding: 20px;
+            background-color: #e0e0e0;
+            border-radius: 8px;
             margin-bottom: 20px;
         }
 
         .item-image {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             object-fit: cover;
             border-radius: 4px;
-            margin-right: 15px;
+            margin-right: 20px;
         }
 
         .item-description {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            font-size: 14px;
         }
 
         .item-description .title {
@@ -89,8 +85,8 @@
         }
 
         .item-description .price {
-            font-size: 14px;
-            color: #00aaff;
+            color: #ff5722;
+            margin-top: 5px;
         }
 
         .item-description .size {
@@ -98,57 +94,129 @@
             margin-top: 3px;
         }
 
-        .add-to-cart-button {
-            width: 100%;
-            padding: 12px;
-            background-color: #00aaff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-size: 16px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
+        .item-description .extra-description {
+            font-size: 12px;
+            margin-top: 10px;
+            color: #333;
         }
 
-        .add-to-cart-button:hover {
-            background-color: #0088cc;
+        .rating {
+            display: flex;
+            margin-top: 10px;
         }
 
         .star {
-            font-size: 20px;
-            color: gold;
+            font-size: 24px;
+            color: #ccc;
+            cursor: pointer;
         }
+
+        .star.selected {
+            color: #ffcc00;
+        }
+
+        .review-title {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .text-box {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .text-box::placeholder {
+            color: #aaa;
+        }
+
+        .submit-button {
+            width: 100%;
+            max-width: 200px;
+            padding: 12px;
+            background-color: #00aaff;
+            color: white;
+            text-align: center;
+            border-radius: 4px;
+            font-size: 16px;
+            text-decoration: none;
+            display: block;
+            margin: 20px auto 0;
+        }
+
+        .submit-button:hover {
+            background-color: #0088cc;
+        }
+
     </style>
 </head>
 <body>
 
     <header>
         <div class="logo">Pure</div>
-        <a href="cart.html" class="cart">🛒</a>
     </header>
 
     <div class="container">
         <main>
-            <h2>お気に入りアイテム</h2>
+            <h2>アイテムレビュー</h2>
 
-            <div class="item">
+            <!-- 商品レビューセクション -->
+            <div class="item-review">
                 <img src="../images/商品1.png" alt="Leeデニムジャケット" class="item-image">
                 <div class="item-description">
                     <div class="title">Leeデニムジャケット（Gジャン）</div>
+                    <div class="size">サイズ：FREE SIZE</div>
                     <div class="price">¥7,499（税込）</div>
+                    <div class="extra-description">メンズ　デニムジャケット</div>
                 </div>
             </div>
 
-            <!-- カートに入れるボタン -->
-            <button class="add-to-cart-button">
-                カートに入れる
-                <span class="star">★</span>
-            </button>
+            <!-- 評価 -->
+            <div class="rating">
+                <span class="star" data-rating="1">★</span>
+                <span class="star" data-rating="2">★</span>
+                <span class="star" data-rating="3">★</span>
+                <span class="star" data-rating="4">★</span>
+                <span class="star" data-rating="5">★</span>
+            </div>
+
+            <!-- レビューのタイトル入力 -->
+            <div class="review-title">レビュータイトル</div>
+            <textarea class="text-box" placeholder="レビュータイトルを入力してください"></textarea>
+
+            <!-- レビュー内容 -->
+            <div class="review-title">もっとも伝えたいポイントは何ですか？</div>
+            <textarea class="text-box" placeholder="もっとも伝えたいポイントは何ですか？"></textarea>
+
+            <!-- 追加レビュー内容 -->
+            <div class="review-title">気に入ったこと・気に入らなかったことは何ですか？この商品をどのように使いましたか？</div>
+            <textarea class="text-box" placeholder="気に入ったこと・気に入らなかったことは何ですか？この商品をどのように使いましたか？"></textarea>
+
+            <!-- 送信ボタン -->
+            <a href="#" class="submit-button">レビューを送信</a>
         </main>
     </div>
+
+    <script>
+        // 星の選択機能
+        const stars = document.querySelectorAll('.star');
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                const rating = star.getAttribute('data-rating');
+                stars.forEach(s => {
+                    if (s.getAttribute('data-rating') <= rating) {
+                        s.classList.add('selected');
+                    } else {
+                        s.classList.remove('selected');
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
