@@ -94,9 +94,9 @@
  
     <div class="other-goods">
         <a href="shohin.php">
-            <img src="../images/商品2.png" alt="商品2">
-            <img src="../images/商品3.png" alt="商品3">
-            <img src="../images/商品1.png" alt="商品4">
+            <img src="../images/画像2.png" alt="画像2">
+            <img src="../images/画像3.png" alt="商品3">
+            <img src="../images/画像4.png" alt="商品4">
         </a>
     </div>
  
