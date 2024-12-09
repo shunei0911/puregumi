@@ -109,7 +109,7 @@
     <div class="ranking">
         <div class="ranking-item">
             <div class="rank">1位</div>
-            <img src="../images/画像    1.png" alt="Leeデニムジャケット">
+            <img src="../images/商品1.png" alt="Leeデニムジャケット">
             <div class="product-name">Leeデニムジャケット</div>
         </div>
         <div class="ranking-item">

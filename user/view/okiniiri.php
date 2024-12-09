@@ -131,7 +131,26 @@
 }
 
 
-
+.floating-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #808080;
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            border: none;
+            font-size: 24px;
+        }
+        .floating-button:hover {
+            background-color: #696969;
+        }
 
     </style>
 </head>
@@ -165,5 +184,10 @@
         </main>
     </div>
 
+    <form action="home.php">
+        <button class="floating-button">
+            ←
+        </button>
+    </form>
 </body>
 </html>
