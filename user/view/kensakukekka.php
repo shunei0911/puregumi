@@ -114,6 +114,46 @@
             font-size: 14px;
             color: #00aaff;
         }
+
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #808080;
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            border: none;
+            font-size: 24px;
+        }
+        .floating-button:hover {
+            background-color: #696969;
+        }.floating-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #808080;
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            border: none;
+            font-size: 24px;
+        }
+        .floating-button:hover {
+            background-color: #696969;
+        }
     </style>
 </head>
 <body>
@@ -137,7 +177,7 @@
     <script>
         // サンプルデータ（データベースから取得する部分をシミュレート）
         const products = [
-            { id: 1, name: "Leeデニムジャケット", price: 7499, image: "../images/画像1.png" },
+            { id: 1, name: "Leeデニムジャケット", price: 7499, image: "../images/商品1.png" },
             { id: 2, name: "SERACEスウェット", price: 5940, image: "../images/画像2.png" },
             { id: 3, name: "ミッキーT BLOC28", price: 1800, image: "../images/画像3.png" },
             { id: 4, name: "apres jour mignon バルーンブルゾン", price: 5995, image: "../images/画像4.png" }
@@ -169,6 +209,12 @@
         // 初期表示
         displayProducts(products);
     </script>
+
+<form action="kensaku.php">
+        <button class="floating-button">
+            ←
+        </button>
+    </form>
  
 </body>
 </html>
